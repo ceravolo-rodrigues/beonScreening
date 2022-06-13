@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39B255CBFB6D183B15ADFCA6 /* Pods_BeOnScreening.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 583B43C316269FA114B405A3 /* Pods_BeOnScreening.framework */; };
 		39C2BE292857B16B00AEA46E /* BeOnScreeningApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C2BE282857B16B00AEA46E /* BeOnScreeningApp.swift */; };
 		39C2BE2B2857B16B00AEA46E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C2BE2A2857B16B00AEA46E /* ContentView.swift */; };
 		39C2BE2D2857B16E00AEA46E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39C2BE2C2857B16E00AEA46E /* Assets.xcassets */; };
 		39C2BE302857B16E00AEA46E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39C2BE2F2857B16E00AEA46E /* Preview Assets.xcassets */; };
+		39C2BE382857B8A000AEA46E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C2BE372857B8A000AEA46E /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,11 @@
 		39C2BE2A2857B16B00AEA46E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		39C2BE2C2857B16E00AEA46E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39C2BE2F2857B16E00AEA46E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		39C2BE372857B8A000AEA46E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		39C2BE3A2857BBAD00AEA46E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		583B43C316269FA114B405A3 /* Pods_BeOnScreening.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeOnScreening.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A40F0CEBA853DDA70C65C207 /* Pods-BeOnScreening.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeOnScreening.debug.xcconfig"; path = "Target Support Files/Pods-BeOnScreening/Pods-BeOnScreening.debug.xcconfig"; sourceTree = "<group>"; };
+		D006A19CD9487903F8051ED5 /* Pods-BeOnScreening.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeOnScreening.release.xcconfig"; path = "Target Support Files/Pods-BeOnScreening/Pods-BeOnScreening.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39B255CBFB6D183B15ADFCA6 /* Pods_BeOnScreening.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +45,8 @@
 			children = (
 				39C2BE272857B16B00AEA46E /* BeOnScreening */,
 				39C2BE262857B16B00AEA46E /* Products */,
+				CD75D86D45910BAA0BDD2570 /* Pods */,
+				9ED9056588816937AA0887F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +61,8 @@
 		39C2BE272857B16B00AEA46E /* BeOnScreening */ = {
 			isa = PBXGroup;
 			children = (
+				39C2BE3A2857BBAD00AEA46E /* Info.plist */,
+				39C2BE362857B89300AEA46E /* Network */,
 				39C2BE282857B16B00AEA46E /* BeOnScreeningApp.swift */,
 				39C2BE2A2857B16B00AEA46E /* ContentView.swift */,
 				39C2BE2C2857B16E00AEA46E /* Assets.xcassets */,
@@ -67,6 +79,31 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		39C2BE362857B89300AEA46E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				39C2BE372857B8A000AEA46E /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9ED9056588816937AA0887F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				583B43C316269FA114B405A3 /* Pods_BeOnScreening.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD75D86D45910BAA0BDD2570 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A40F0CEBA853DDA70C65C207 /* Pods-BeOnScreening.debug.xcconfig */,
+				D006A19CD9487903F8051ED5 /* Pods-BeOnScreening.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +111,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39C2BE332857B16E00AEA46E /* Build configuration list for PBXNativeTarget "BeOnScreening" */;
 			buildPhases = (
+				6200B2F8AE62FD05BEFB4B84 /* [CP] Check Pods Manifest.lock */,
 				39C2BE212857B16B00AEA46E /* Sources */,
 				39C2BE222857B16B00AEA46E /* Frameworks */,
 				39C2BE232857B16B00AEA46E /* Resources */,
+				2947BE9AF967FC9F50828F7D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,12 +171,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2947BE9AF967FC9F50828F7D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeOnScreening/Pods-BeOnScreening-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeOnScreening/Pods-BeOnScreening-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeOnScreening/Pods-BeOnScreening-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6200B2F8AE62FD05BEFB4B84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeOnScreening-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		39C2BE212857B16B00AEA46E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				39C2BE2B2857B16B00AEA46E /* ContentView.swift in Sources */,
+				39C2BE382857B8A000AEA46E /* NetworkManager.swift in Sources */,
 				39C2BE292857B16B00AEA46E /* BeOnScreeningApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +343,7 @@
 		};
 		39C2BE342857B16E00AEA46E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A40F0CEBA853DDA70C65C207 /* Pods-BeOnScreening.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -269,6 +352,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BeOnScreening/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BeOnScreening/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -289,6 +373,7 @@
 		};
 		39C2BE352857B16E00AEA46E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D006A19CD9487903F8051ED5 /* Pods-BeOnScreening.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -297,6 +382,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BeOnScreening/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BeOnScreening/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
